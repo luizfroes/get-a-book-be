@@ -12,7 +12,7 @@ const addUser = async (_, { user }) => {
     };
   } catch (error) {
     console.log(`[ERROR]: Failed to add user | ${error.message}`);
-    throw new ApolloError("Failed to add user.");
+    throw new ApolloError("Failed to add user");
   }
 };
 

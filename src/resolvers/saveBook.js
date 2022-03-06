@@ -5,7 +5,7 @@ const { User } = require("../models");
 const saveBook = async (_, { book }, context) => {
   try {
     if (!context.user) {
-      throw new AuthenticationError("You must be logged in to add a book.");
+      throw new AuthenticationError("You must be logged in to add a book");
     }
 
     const updatedUser = await User.findOneAndUpdate(
@@ -20,7 +20,7 @@ const saveBook = async (_, { book }, context) => {
     return updatedUser;
   } catch (error) {
     console.log(`[ERROR]: Failed to add book | ${error.message}`);
-    throw new ApolloError("Failed to add book.");
+    throw new ApolloError("Failed to add book");
   }
 };
 

@@ -7,7 +7,7 @@ const checkUser = async (_, __, { user }) => {
     const userFromDb = await User.findById(user.id);
     return userFromDb;
   }
-  throw new AuthenticationError("Unauthorized access.");
+  throw new AuthenticationError("Unauthorized access");
 };
 
 module.exports = checkUser;
