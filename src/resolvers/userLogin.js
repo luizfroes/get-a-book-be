@@ -11,7 +11,7 @@ const userLogin = async (_, { user }) => {
     throw new AuthenticationError("Failed to login.");
   }
 
-  const isValidPassword = await userFromDb.checkPassword(user.password);
+  const isValidPassword = await userFromDb.isCorrectPassword(user.password);
 
   if (!isValidPassword) {
     console.log("[ERROR]: Failed to login. Incorrect password.");

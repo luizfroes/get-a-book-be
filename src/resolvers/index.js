@@ -2,13 +2,13 @@ const userLogin = require("./userLogin");
 const addUser = require("./addUser");
 const saveBook = require("./saveBook");
 const removeBook = require("./removeBook");
-const checkUser = require("./checkUser");
+const me = require("./me");
 
 console.log(addUser);
 
 const resolvers = {
   Query: {
-    checkUser,
+    me,
   },
   Mutation: { userLogin, addUser, saveBook, removeBook },
 };
